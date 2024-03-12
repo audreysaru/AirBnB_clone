@@ -10,6 +10,7 @@ from models.city import City
 from models.amenity import Amenity
 from models.place import Place
 from models.review import Review
+from models.base_model import BaseModel
 
 
 class FileStorage:
@@ -43,8 +44,6 @@ class FileStorage:
         try:
             with open(FileStorage.__file_path, 'r') as f:
                 dictofobjs = json.loads(f.read())
-                from models.base_model import BaseModel
-                from models.user import User
                 for key, value in dictofobjs.items():
                     if value['__class__'] == 'BaseModel':
                         FileStorage.__objects[key] = BaseModel(**value)
