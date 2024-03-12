@@ -12,7 +12,12 @@ class User(BaseModel):
     Public Attributes that will use FileStorage in engine
     folder to manage serialization and deserialization of User
     """
-    email = ""
-    password = ""
-    first_name = ""
-    last_name = ""
+    def __init__(self, *args, **kwargs):
+        """
+        Initializes a new User instance
+        """
+        super().__init__(*args, **kwargs)
+        self.email = ""
+        self.password = ""
+        self.first_name = ""
+        self.last_name = ""

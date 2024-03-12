@@ -108,7 +108,7 @@ class, saves it (to the JSON file) and prints the id.\n', f.getvalue())
             HBNBCommand().onecmd("")
         self.assertEqual(f.getvalue(), '')
 
-    def test_basedotall(self):
+    def test_base.all(self):
         with patch('sys.stdout', new=StringIO()) as f:
             HBNBCommand().onecmd("BaseModel.all()")
         self.assertNotIn('[City]', f.getvalue())
@@ -120,7 +120,7 @@ class, saves it (to the JSON file) and prints the id.\n', f.getvalue())
             HBNBCommand().onecmd("BaseModel.all")
         self.assertIn('**', f.getvalue())
 
-    def test_reviewdotall(self):
+    def test_review.all(self):
         with patch('sys.stdout', new=StringIO()) as f:
             HBNBCommand().onecmd("Review.all()")
         self.assertNotIn('[BaseModel]', f.getvalue())
@@ -133,7 +133,7 @@ class, saves it (to the JSON file) and prints the id.\n', f.getvalue())
             HBNBCommand().onecmd("Review.all")
         self.assertIn('**', f.getvalue())
 
-    def test_userdotall(self):
+    def test_user.all(self):
         with patch('sys.stdout', new=StringIO()) as f:
             HBNBCommand().onecmd("User.all()")
         self.assertNotIn('[BaseModel]', f.getvalue())
@@ -146,7 +146,7 @@ class, saves it (to the JSON file) and prints the id.\n', f.getvalue())
             HBNBCommand().onecmd("User.all")
         self.assertIn('**', f.getvalue())
 
-    def test_statedotall(self):
+    def test_state.all(self):
         with patch('sys.stdout', new=StringIO()) as f:
             HBNBCommand().onecmd("State.all()")
         self.assertNotIn('[BaseModel]', f.getvalue())
@@ -159,7 +159,7 @@ class, saves it (to the JSON file) and prints the id.\n', f.getvalue())
             HBNBCommand().onecmd("State.all")
         self.assertIn('***', f.getvalue())
 
-    def test_placedotall(self):
+    def test_place.all(self):
         with patch('sys.stdout', new=StringIO()) as f:
             HBNBCommand().onecmd("Place.all()")
         self.assertNotIn('[BaseModel]', f.getvalue())
@@ -172,7 +172,7 @@ class, saves it (to the JSON file) and prints the id.\n', f.getvalue())
             HBNBCommand().onecmd("Place.all")
         self.assertIn('**', f.getvalue())
 
-    def test_amenitydotall(self):
+    def test_amenity.all(self):
         with patch('sys.stdout', new=StringIO()) as f:
             HBNBCommand().onecmd("Amenity.all()")
         self.assertNotIn('[BaseModel]', f.getvalue())
@@ -185,7 +185,7 @@ class, saves it (to the JSON file) and prints the id.\n', f.getvalue())
             HBNBCommand().onecmd("Amenity.all")
         self.assertIn('**', f.getvalue())
 
-    def test_citydotall(self):
+    def test_city.all(self):
         with patch('sys.stdout', new=StringIO()) as f:
             HBNBCommand().onecmd("City.all()")
         self.assertNotIn('[BaseModel]', f.getvalue())
